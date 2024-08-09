@@ -1,0 +1,47 @@
+$(document).ready(function () {
+    $("#akronInfoDiv").hide();
+    $("#minneapolisInfoDiv").hide();
+    $("#louisvilleInfoDiv").hide();
+
+    $("#akronButton").click(function(){
+      $("#mainInfoDiv").hide();
+      $("#akronInfoDiv").show();
+      $("#akronWeather").hide();
+      $("#minneapolisInfoDiv").hide();
+      $("#louisvilleInfoDiv").hide();
+    });
+    $("#minneapolisButton").click(function(){
+      $("#mainInfoDiv").hide();
+      $("#akronInfoDiv").hide();
+      $("#minneapolisInfoDiv").show();
+      $("#minneapolisWeather").hide();
+      $("#louisvilleInfoDiv").hide();
+    });
+    $("#louisvilleButton").on("click",function(){
+      $("#mainInfoDiv").hide();
+      $("#louisvilleInfoDiv").show();
+      $("#louisvilleWeather").hide();
+      $("#minneapolisInfoDiv").hide();
+      $("#akronInfoDiv").hide();
+    });
+    $("#mainButton").click(function(){
+      $("#mainInfoDiv").show();
+      $("#louisvilleInfoDiv").hide();
+      $("#minneapolisInfoDiv").hide();
+      $("#akronInfoDiv").hide();
+    });
+    $("#akronWeatherButton").click(function(){
+      $("#akronWeather").toggle("fast","linear");
+    });
+    $("#minneapolisWeatherButton").click(function(){
+      $("#minneapolisWeather").toggle("slow");
+    });
+    $("#louisvilleWeatherButton").click(function(){
+      $("#louisvilleWeather").toggle("swing");
+    });
+    $("td").hover(function(){
+      $(this).css("background-color","whitesmoke")
+    },function(){
+      $(this).css("background-color","white")
+    });
+});
